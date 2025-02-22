@@ -18,7 +18,7 @@ public class RadioButtonTest extends BaseTest {
         boolean actualIsFemaleRadioButtonSelected = practiceFormPage.isFemaleRadioButtonSelected();
 
         //then
-        String message = "\n Female Radio Button Is Not Selected \n";
+        String message = "\nFemale Radio Button Is Not Selected\n";
 
         Assert.assertTrue(actualIsFemaleRadioButtonSelected, message);
     }
