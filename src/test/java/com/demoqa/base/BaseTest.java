@@ -11,8 +11,8 @@ import org.testng.annotations.BeforeMethod;
 public class BaseTest {
 
     private WebDriver driver;
-    private BasePage basePage;
-    private HomePage homePage;
+    protected BasePage basePage;
+    protected HomePage homePage;
     private final String URL = "https://demoqa.com/";
 
     @BeforeClass
