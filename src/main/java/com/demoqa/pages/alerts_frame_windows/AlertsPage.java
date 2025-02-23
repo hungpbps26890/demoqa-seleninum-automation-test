@@ -10,6 +10,10 @@ public class AlertsPage extends AlertsFrameWindowsPage {
 
     private By confirmationResult = By.id("confirmResult");
 
+    private By promptAlertButton = By.id("promtButton");
+
+    private By promptResult = By.id("promptResult");
+
     public void clickInformationAlertButton() {
         click(informationAlertButton);
     }
@@ -20,5 +24,13 @@ public class AlertsPage extends AlertsFrameWindowsPage {
 
     public String getConfirmationResult() {
         return find(confirmationResult).getText();
+    }
+
+    public void clickPromptAlertButton() {
+        click(promptAlertButton);
+    }
+
+    public String getPromptResult() {
+        return find(promptResult).getText();
     }
 }

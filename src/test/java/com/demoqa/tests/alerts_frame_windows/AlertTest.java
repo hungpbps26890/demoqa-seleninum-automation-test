@@ -42,4 +42,24 @@ public class AlertTest extends BaseTest {
         Assert.assertEquals(actualResult, expectedResult,
                 "\nActual & Expected Result Do Not Match\n");
     }
+
+    @Test
+    public void testPromptAlert() {
+        //given
+        String text = "Hello, World!";
+
+        AlertsPage alertsPage = homePage.goToAlertsFrameWindows().clickAlerts();
+
+        //when
+        alertsPage.clickPromptAlertButton();
+        SwitchToUtility.setAlertText(text);
+        SwitchToUtility.acceptAlert();
+
+        String actualText = alertsPage.getPromptResult();
+        String expectedText = "You entered " + text;
+
+        //then
+        Assert.assertEquals(actualText, expectedText,
+                "\nActual & Expected Text Do Not Match\n");
+    }
 }
