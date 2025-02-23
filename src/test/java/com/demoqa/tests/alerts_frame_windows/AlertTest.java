@@ -25,4 +25,21 @@ public class AlertTest extends BaseTest {
 
         SwitchToUtility.acceptAlert();
     }
+
+    @Test
+    public void testConfirmationAlert() {
+        //given
+        AlertsPage alertsPage = homePage.goToAlertsFrameWindows().clickAlerts();
+
+        //when
+        alertsPage.clickConfirmationButton();
+        SwitchToUtility.dismissAlert();
+
+        String actualResult = alertsPage.getConfirmationResult();
+        String expectedResult = "You selected Cancel";
+
+        //then
+        Assert.assertEquals(actualResult, expectedResult,
+                "\nActual & Expected Result Do Not Match\n");
+    }
 }
