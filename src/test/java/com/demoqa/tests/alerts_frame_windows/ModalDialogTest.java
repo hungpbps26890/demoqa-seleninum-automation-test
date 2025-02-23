@@ -10,7 +10,7 @@ public class ModalDialogTest extends BaseTest {
     @Test
     public void testSmallModalDialog() {
         //given
-        String expectedText = "This is a big modal. It has very less content";
+        String expectedText = "This is a small modal. It has very less content";
 
         ModalDialogsPage modalDialogsPage = homePage.goToAlertsFrameWindows().clickModalDialogs();
 
