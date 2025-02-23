@@ -10,17 +10,18 @@ public class ModalDialogTest extends BaseTest {
     @Test
     public void testSmallModalDialog() {
         //given
-        String expectedText = "This is a small modal. It has very less content";
+        String expectedText = "This is a big modal. It has very less content";
 
         ModalDialogsPage modalDialogsPage = homePage.goToAlertsFrameWindows().clickModalDialogs();
 
         //when
         modalDialogsPage.clickSmallModalButton();
         String actualText = modalDialogsPage.getSmallModalText();
-        modalDialogsPage.clickSmallModalCloseButton();
 
         //then
         Assert.assertEquals(actualText, expectedText,
                 "\nActual & Expected Text Do Not Match\n");
+
+        modalDialogsPage.clickSmallModalCloseButton();
     }
 }
