@@ -1,6 +1,7 @@
 package com.demoqa.pages.alerts_frame_windows;
 
 import com.demoqa.utilities.JavaScriptUtility;
+import com.demoqa.utilities.WaitUtility;
 import org.openqa.selenium.By;
 
 import java.time.Duration;
@@ -23,7 +24,7 @@ public class FramesPage extends AlertsFrameWindowsPage {
     }
 
     public String getSampleHeadingInBigBox() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        WaitUtility.implicitWait(2);
 
         scrollToElementJS(iFrameBigBox);
         switchToFrameWebElement(find(iFrameBigBox));

@@ -22,4 +22,8 @@ public class WaitUtility extends Utility {
                 .ignoring(NoSuchElementException.class);
         fluentWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+
+    public static void implicitWait(int seconds) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
+    }
 }
