@@ -11,6 +11,8 @@ public class ElementsPage extends HomePage {
 
     private By linksMenuItem = By.xpath("//li[@id='item-5']//span[text()='Links']");
 
+    private By dynamicPropertiesMenuItem = By.xpath("//li[@id='item-8']/span[text()='Dynamic Properties']");
+
     public WebTablesPage clickWebTables() {
         scrollToElementJS(webTablesMenuItem);
         click(webTablesMenuItem);
@@ -21,5 +23,11 @@ public class ElementsPage extends HomePage {
         scrollToElementJS(linksMenuItem);
         click(linksMenuItem);
         return new LinksPage();
+    }
+
+    public DynamicPropertiesPage clickDynamicProperties() {
+        scrollToElementJS(dynamicPropertiesMenuItem);
+        click(dynamicPropertiesMenuItem);
+        return new DynamicPropertiesPage();
     }
 }
