@@ -13,6 +13,8 @@ public class WidgetsPage extends HomePage {
 
     private By progressBarMenuItem = By.xpath("//li[@id='item-4']/span[text()='Progress Bar']");
 
+    private By sliderMenuItem = By.xpath("//li[@id='item-3']/span[text()='Slider']");
+
     public SelectMenuPage clickSelectMenu() {
         scrollToElementJS(selectMenuItem);
         click(selectMenuItem);
@@ -31,4 +33,9 @@ public class WidgetsPage extends HomePage {
         return new ProgressBarPage();
     }
 
+    public SliderPage clickSlider() {
+        scrollToElementJS(sliderMenuItem);
+        click(sliderMenuItem);
+        return new SliderPage();
+    }
 }
